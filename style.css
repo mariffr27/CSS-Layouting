@@ -1,0 +1,86 @@
+html, body {
+    color: #fff;
+    background-color: #555;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "aside section"
+    "footer footer";
+    gap: 10px;
+    flex: 1 ;
+    
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 20px;
+    padding: 14px;
+    background-color: #222;
+}
+
+nav ul li a {
+    color: red;
+    text-decoration: none;
+}
+
+aside {
+    background-color: aqua;
+    grid-area: aside;
+    margin: 20px;
+    padding: 20px;
+}
+
+section {
+    grid-area: section;
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+section .kotak {
+    background-color: aqua;
+    margin: 20px 0 0 20px;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    grid-area: kotak;
+
+}
+
+section p {
+    margin-left: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+    padding: 20px;
+    margin-top: auto;   
+    text-align: center;
+}
